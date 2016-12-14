@@ -1,12 +1,17 @@
-package com.example.root.dez;
+package com.example.root.dez.Model;
+
+import java.io.Reader;
+
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by root on 06.12.16.
+ * Created by root on 10.12.16.
  */
 
-public class Artist {
-
+public class Gerne extends RealmObject{
     private String picture;
+
 
     private String id;
 
@@ -16,13 +21,8 @@ public class Artist {
 
     private String picture_small;
 
-    private String link;
-
     private String name;
 
-    private String tracklist;
-
-    private String type;
 
     private String picture_xl;
 
@@ -76,16 +76,6 @@ public class Artist {
         this.picture_small = picture_small;
     }
 
-    public String getLink ()
-    {
-        return link;
-    }
-
-    public void setLink (String link)
-    {
-        this.link = link;
-    }
-
     public String getName ()
     {
         return name;
@@ -96,25 +86,6 @@ public class Artist {
         this.name = name;
     }
 
-    public String getTracklist ()
-    {
-        return tracklist;
-    }
-
-    public void setTracklist (String tracklist)
-    {
-        this.tracklist = tracklist;
-    }
-
-    public String getType ()
-    {
-        return type;
-    }
-
-    public void setType (String type)
-    {
-        this.type = type;
-    }
 
     public String getPicture_xl ()
     {
@@ -126,9 +97,4 @@ public class Artist {
         this.picture_xl = picture_xl;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [picture = "+picture+", id = "+id+", picture_medium = "+picture_medium+", picture_big = "+picture_big+", picture_small = "+picture_small+", link = "+link+", name = "+name+", tracklist = "+tracklist+", type = "+type+", picture_xl = "+picture_xl+"]";
-    }
 }

@@ -1,33 +1,33 @@
-package com.example.root.dez;
+package com.example.root.dez.Model;
+
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by root on 06.12.16.
  */
 
-public class DzUser {
+public class Artist extends RealmObject{
 
+    private String picture;
 
-        private String picture;
+    private String id;
 
-        private String id;
+    private String picture_medium;
 
-        private String picture_medium;
+    private String picture_big;
 
-        private String picture_big;
+    private String picture_small;
 
-        private String picture_small;
+    private String link;
 
-        private String link;
+    private String name;
 
-        private String name;
+    private String tracklist;
 
-        private String tracklist;
+    private String type;
 
-        private String type;
-
-        private String country;
-
-        private String picture_xl;
+    private String picture_xl;
 
     public String getPicture ()
     {
@@ -119,16 +119,6 @@ public class DzUser {
         this.type = type;
     }
 
-    public String getCountry ()
-    {
-        return country;
-    }
-
-    public void setCountry (String country)
-    {
-        this.country = country;
-    }
-
     public String getPicture_xl ()
     {
         return picture_xl;
@@ -139,10 +129,5 @@ public class DzUser {
         this.picture_xl = picture_xl;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [picture = "+picture+", id = "+id+", picture_medium = "+picture_medium+", picture_big = "+picture_big+", picture_small = "+picture_small+", link = "+link+", name = "+name+", tracklist = "+tracklist+", type = "+type+", country = "+country+", picture_xl = "+picture_xl+"]";
-    }
 
 }

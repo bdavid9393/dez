@@ -1,13 +1,24 @@
-package com.example.root.dez;
+package com.example.root.dez.Model;
+
+
+
+import io.realm.RealmList;
+import io.realm.RealmObject;
+
+
 
 /**
  * Created by root on 06.12.16.
  */
 
-public class Data {
+public class Search extends RealmObject{
+
+
     private String title_short;
 
     private String id;
+
+    private String cover_big;
 
     private String readable;
 
@@ -27,9 +38,25 @@ public class Data {
 
     private Artist artist;
 
-    private String type;
+    private RealmList<Track> dispTrack;
 
     private String explicit_lyrics;
+
+    public RealmList<Track> getDispTrack() {
+        return dispTrack;
+    }
+
+    public void setDispTrack(RealmList<Track> dispTrack) {
+        this.dispTrack = dispTrack;
+    }
+
+    public String getCover_big() {
+        return cover_big;
+    }
+
+    public void setCover_big(String cover_big) {
+        this.cover_big = cover_big;
+    }
 
     public String getTitle_short ()
     {
@@ -101,15 +128,9 @@ public class Data {
         this.preview = preview;
     }
 
-    public Album getAlbum ()
-    {
-        return album;
-    }
 
-    public void setAlbum (Album album)
-    {
-        this.album = album;
-    }
+
+
 
     public String getLink ()
     {
@@ -141,14 +162,12 @@ public class Data {
         this.artist = artist;
     }
 
-    public String getType ()
-    {
-        return type;
+    public Album getAlbum() {
+        return album;
     }
 
-    public void setType (String type)
-    {
-        this.type = type;
+    public void setAlbum(Album album) {
+        this.album = album;
     }
 
     public String getExplicit_lyrics ()
@@ -161,9 +180,5 @@ public class Data {
         this.explicit_lyrics = explicit_lyrics;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [title_short = "+title_short+", id = "+id+", readable = "+readable+", rank = "+rank+", duration = "+duration+", title = "+title+", preview = "+preview+", album = "+album+", link = "+link+", title_version = "+title_version+", artist = "+artist+", type = "+type+", explicit_lyrics = "+explicit_lyrics+"]";
-    }
+
 }
